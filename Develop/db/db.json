@@ -1,6 +1,18 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Eat Breakfast",
+        "text": "Breakfast is the most important meal of the day. Don't skip it."
+    },
+    {
+        "title": "Pay back Raymond",
+        "text": "Pay back Raymond the $20 that you borrowed from him."
+    },
+    {
+        "title": "Vacation Plans",
+        "text": "I always wanted to go to Japan. Check all friends' schedules to see who can come along."
+    },
+    {
+        "title": "hi there",
+        "text": "text stuff"
     }
 ]

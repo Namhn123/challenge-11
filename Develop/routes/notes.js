@@ -1,13 +1,11 @@
-const tips = require('express').Router();
+const notes = require('express').Router();
 const {readFromFile, readAndAppend} = require('../helpers/fsUtils');
 
-// GET Route for retrieving all the tips
-tips.get('/', (req, res) => {
+notes.get('/', (req, res) => {
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-// POST Route for a new UX/UI tip
-tips.post('/', (req, res) => {
+notes.post('/', (req, res) => {
   const { title, text } = req.body;
 
   if (req.body) {
@@ -23,4 +21,4 @@ tips.post('/', (req, res) => {
   }
 });
 
-module.exports = tips;
+module.exports = notes;
