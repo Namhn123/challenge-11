@@ -5,8 +5,9 @@ Given starter code, the goal of this project is to create a server routes for a 
 npm i
 
 ## Usage
+```
 The applications can be accessed via https://namhn123.github.io/challenge-10/
-Video tutorial: https://drive.google.com/file/d/1DnkL04kpk-Zc2vlXqY6COcrh2TVXs3et/view
-
+Heroku Link: https://dashboard.heroku.com/apps/namnguyen-challenge-11/deploy/github
+```
 ![index.html](./assets/pic0.png)
 ![notes.html](./assets/pic1.png)
