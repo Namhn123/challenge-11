@@ -1,5 +1,6 @@
 const notes = require('express').Router();
-const {readFromFile, readAndAppend} = require('../helpers/fsUtils');
+const { v4: uuidv4 } = require('uuid');
+const {readFromFile, readAndAppend, writeToFile} = require('../helpers/fsUtils');
 
 notes.get('/', (req, res) => {
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
@@ -12,6 +13,7 @@ notes.post('/', (req, res) => {
     const newNote = {
       title,
       text,
+      id: uuidv4()
     };
 
     readAndAppend(newNote, './db/db.json');
@@ -20,5 +22,21 @@ notes.post('/', (req, res) => {
     res.error('Error in adding note');
   }
 });
+
+notes.delete('/:noteId', (req, res) => {
+    const noteId = req.params.noteId;
+    readFromFile('./db/db.json')
+      .then((data) => JSON.parse(data))
+      .then((json) => {
+        // Make a new array of all tips except the one with the ID provided in the URL
+        const result = json.filter((note) => note.id !== noteId);
+  
+        // Save that array to the filesystem
+        writeToFile('./db/db.json', result);
+  
+        // Respond to the DELETE request
+        res.json(`Item has been deleted`);
+      });
+  });
 
 module.exports = notes;

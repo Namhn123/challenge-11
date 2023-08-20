@@ -1,18 +1,17 @@
 [
     {
         "title": "Eat Breakfast",
-        "text": "Breakfast is the most important meal of the day. Don't skip it."
+        "text": "Breakfast is the most important meal of the day. Don't skip it.",
+        "id": "3fe5d166-2f9e-4e3d-87a7-25a561207c6c"
     },
     {
         "title": "Pay back Raymond",
-        "text": "Pay back Raymond the $20 that you borrowed from him."
+        "text": "Pay back Raymond the $20 that you borrowed from him.",
+        "id": "ca0616fa-f603-4d85-a9c6-fa62c73a9bf9"
     },
     {
         "title": "Vacation Plans",
-        "text": "I always wanted to go to Japan. Check all friends' schedules to see who can come along."
-    },
-    {
-        "title": "hi there",
-        "text": "text stuff"
+        "text": "I always wanted to go to Japan. Check all friends' schedules to see who can come along.",
+        "id": "c83c28af-9197-4f2f-b119-03236ecfc0b6"
     }
 ]
