@@ -13,14 +13,14 @@ app.use('/api', api);
 
 app.use(express.static('public'));
 
-// GET Route for homepage
-app.get('/', (req, res) =>
+// GET Route for all pages that haven't been specified
+app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-// Wildcard route to direct users to a 404 page
-app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/pages/404.html'))
+// GET Route for notes page
+app.get('/notes', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
 app.listen(PORT, () =>
